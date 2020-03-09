@@ -1,0 +1,14 @@
+
+
+.col{
+    padding: 12px;
+    max-width: 580px;
+    margin: auto;
+    background-color:ghostwhite;
+    border:1px solid darkgray;
+}
+
+.form-group {
+    margin:12px;
+}
+
