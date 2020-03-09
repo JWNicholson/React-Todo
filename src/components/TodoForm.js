@@ -26,9 +26,7 @@ class TodoForm extends React.Component {
         return (
             <div className="todo-form">
              <Form onSubmit={this.handleSubmit}>
-           
-             <Row form>
-               
+             <Row form>  
             <Col >
             <FormGroup>
                 <Input
@@ -49,14 +47,10 @@ class TodoForm extends React.Component {
                             Clear completed to-dos
                         </Button>
                     </FormGroup>
-                        </Col>
-                       
-                      </Row>
-                     
+                </Col>     
+                </Row>   
                 </Form>
-                
-                
-                
+            
             </div>
         )
     }
