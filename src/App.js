@@ -12,11 +12,6 @@ class App extends React.Component {
     this.state = {
       todos: [
         {
-         task: 'Finish this project',
-         id: Date.now(),
-         completed: false
-        },
-        {
          task: 'Water the yard',
          id: Date.now(),
          completed: false
@@ -42,6 +37,12 @@ class App extends React.Component {
       todos: this.state.todos.map(todo =>
         todo.id === id ? { ...todo, completed: !todo.completed }:todo
       )
+    })
+  }
+
+  clearCompleted = () => {
+    this.setState({
+      todos: this.state.todos.filter(todo => !todo.completed)
     })
   }
 
