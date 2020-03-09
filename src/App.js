@@ -1,15 +1,16 @@
 import React from 'react';
+import ReactDom from 'react-dom'
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
 
 const todos = [
   {
-    task: 'Finish this assignment',
+    todo: 'Finish this assignment',
     id:1583782428955,
     completed: false
   },
   {
-    task: 'Water the yard',
+    todo: 'Water the yard',
     id:1583782497409,
     completed: false
   }
@@ -26,7 +27,7 @@ class App extends React.Component {
   super();
   this.state ={
     todos: todos,
-    task: ''
+    todo: ''
   };
 }
 
@@ -34,29 +35,29 @@ class App extends React.Component {
   //method to update todo state
 toggleCompleted = clickedTodoId => {
   this.setState ({
-    todos: this.state.todos.map(task => {
-      if (task.id === clickedTodoId){
+    todos: this.state.todos.map(todo => {
+      if (todo.id === clickedTodoId){
         return {
-          task,
-          completed: task.completed
+          ...todo,
+          completed: !todo.completed
         };
       }else{
-        return task;
+        return todo;
       }
     })
   });
 }
 
 //add new task to todos state
-addTodo = taskName => {
+addTodo = todoName => {
   
-  const newTask = {
-    name: taskName,
+  const newTodo = {
+    name: todoName,
     id: new Date(),
     completed: false
   };
   this.setState({
-    todos: [...this.state.todos, newTask]
+    todos: [...this.state.todos, newTodo]
   });
 };
  
