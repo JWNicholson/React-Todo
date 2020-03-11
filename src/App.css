@@ -1,0 +1,13 @@
+.mainWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    background-color:gainsboro;
+    border:1px solid floralwhite;
+    width: 580px;
+    margin: 8px;
+}

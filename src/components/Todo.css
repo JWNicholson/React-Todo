@@ -1,0 +1,8 @@
+ p.completed {
+    text-decoration: line-through;
+}
+
+.todo:hover {
+    cursor: pointer;
+}
+
